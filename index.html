@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitcoin Mining Game</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      background-color: #1a0e1e;
+      color: white;
+      text-align: center;
+    }
+    .header {
+      background-color: #000;
+      padding: 10px;
+    }
+    .bitcoin-balance {
+      background: #222;
+      padding: 10px;
+      margin-top: 10px;
+      display: inline-block;
+      border-radius: 5px;
+    }
+    .main-title {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+    .subtitle {
+      color: yellow;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .trusted {
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+    .timer {
+      font-size: 40px;
+      background: #111;
+      padding: 10px;
+      width: 100px;
+      margin: 10px auto;
+      border-radius: 10px;
+      border: 2px solid #00ffcc;
+    }
+    .btn-satoshi {
+      background: cyan;
+      color: black;
+      font-size: 20px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn-satoshi:hover {
+      background: #00e6e6;
+    }
+    .footer-graphics {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="bitcoin-balance">
+      <strong>BTC:</strong> 0.0000100000
+    </div>
+  </div>
+
+  <div class="main-title">#1 BITCOIN MINING GAME</div>
+  <div class="subtitle">WITH REAL ECONOMY</div>
+  <div class="trusted">Trusted by 4,800,000 players Worldwide</div>
+
+  <div class="timer" id="timer">01:00</div>
+
+  <button class="btn-satoshi" onclick="window.location.href='https://www.profitableratecpm.com/x5z61nyj?key=8ed6c660bf8cd28687303ae8a95656a4';">
+    GET 1000 SATOSHI NOW!
+  </button>
+
+  <div class="footer-graphics">
+    <!-- Tu peux ici ajouter des images ou illustrations pixel-art -->
+    <p>[Illustrations Pixel-Art Placeholder]</p>
+  </div>
+
+  <script>
+    // Timer de 1 minute (60 secondes)
+    let countdown = 60;
+    const timerElement = document.getElementById("timer");
+
+    function updateTimer() {
+      const minutes = Math.floor(countdown / 60);
+      const seconds = countdown % 60;
+      timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+      countdown--;
+      if (countdown >= 0) setTimeout(updateTimer, 1000);
+    }
+
+    updateTimer();
+  </script>
+
+</body>
+</html>
