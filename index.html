@@ -3,93 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bitcoin Mining Pool home</title>
+  <title>Dogecoin Mining Game</title>
   <style>
     body {
       margin: 0;
-      font-family: monospace;
-      background-color: #1a0e1e;
-      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1b1b2f, #162447);
+      color: #f8f9fa;
       text-align: center;
     }
-    .header {
-      background-color: #000;
-      padding: 10px;
+
+    header {
+      background-color: #1f4068;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.4);
     }
-    .bitcoin-balance {
-      background: #222;
-      padding: 10px;
-      margin-top: 10px;
+
+    .doge-balance {
+      font-size: 18px;
+      background: #1b1b2f;
       display: inline-block;
-      border-radius: 5px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 2px solid #e4d00a;
+      margin-top: 10px;
     }
+
     .main-title {
-      font-size: 24px;
-      margin-top: 20px;
+      font-size: 32px;
+      margin: 30px 0 10px;
+      color: #ffcc00;
     }
+
     .subtitle {
-      color: yellow;
+      font-size: 18px;
       font-weight: bold;
-      margin: 10px 0;
-    }
-    .trusted {
-      color: #aaa;
+      color: #c4c4c4;
       margin-bottom: 20px;
     }
+
+    .doge {
+      width: 150px;
+      margin: 20px auto;
+    }
+
     .timer {
       font-size: 40px;
-      background: #111;
-      padding: 10px;
-      width: 100px;
-      margin: 10px auto;
+      background: #0f3460;
+      padding: 10px 30px;
+      width: fit-content;
+      margin: 20px auto;
       border-radius: 10px;
-      border: 2px solid #00ffcc;
+      border: 2px solid #ffcc00;
     }
-    .btn-satoshi {
-      background: cyan;
-      color: black;
+
+    .btn-doge {
+      background: #ffcc00;
+      color: #000;
       font-size: 20px;
-      padding: 15px 30px;
+      padding: 15px 40px;
       border: none;
       border-radius: 10px;
       cursor: pointer;
-      transition: 0.3s;
+      transition: background 0.3s ease;
+      margin-top: 20px;
     }
-    .btn-satoshi:hover {
-      background: #00e6e6;
+
+    .btn-doge:hover {
+      background: #ffe066;
     }
-    .footer-graphics {
-      margin-top: 30px;
-    }
-    .footer-graphics img {
-      width: 90%;
-      max-width: 600px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <div class="bitcoin-balance">
-      <strong>BTC:</strong> 0.0000100000
+  <header>
+    <div class="doge-balance">
+      <strong>DOGE:</strong> 15.00000000
     </div>
-  </div>
+  </header>
 
-  <div class="main-title">#1 BITCOIN MINING pool home</div>
-  <div class="subtitle">WITH REAL ECONOMY</div>
-  <div class="trusted">Trusted by 4,800,000 mineurs Worldwide</div>
+  <h1 class="main-title">DOGECOIN MINING SIMULATOR</h1>
+  <p class="subtitle">Mine Doge, Get Rich, Much Wow!</p>
+
+  <img class="doge" src="https://cryptologos.cc/logos/dogecoin-doge-logo.png?v=026" alt="Dogecoin Logo"/>
 
   <div class="timer" id="timer">01:00</div>
 
-  <button class="btn-satoshi" onclick="window.location.href='https://example.com';">
-    commencer votre minage !
+  <button class="btn-doge" onclick="window.location.href='https://dogecoin.com';">
+    GET 500 DOGE NOW!
   </button>
 
-  <div class="footer-graphics">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAYACAIAAABn4K39AAEAAElEQVR4nFy927Ily24rBrBadvhJ4Qg/SPax7PNRjvDl/z/CR12EHwCwxvKW9mV1zzlGVSYTBMFL8t/+9X+VwIEkiCAGeIGRQFAUKO4AAkUA4kpD+sdFEpIkkIQAgoAEEBBEAIREaIGZ4bs7ZH8EBEEtQAmgIPqDAQBCPlUQAJAApaW/B4AggISWpBYY+MkkkMAKBGYgLTAcrERBIAezWAAA2Gf3..." alt="Bitcoin Pixel Art"/>
-  </div>
+  <footer>
+    Powered by DogeTech - 2025<br/>
+    So fast. Much profit. Very mining.
+  </footer>
 
   <script>
     let countdown = 60;
